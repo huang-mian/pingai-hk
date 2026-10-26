@@ -1,0 +1,41 @@
+{
+  "tag": "tools-2026-10-26",
+  "components": [
+    {
+      "id": "ffmpeg",
+      "platform": "win64",
+      "version": "2026.10.25",
+      "exe": "bin/ffmpeg.exe",
+      "archive": true,
+      "prefixArgs": [],
+      "sourceUrl": "https://github.com/huang-mian/pingai-hk/releases/download/tools-2026-10-26/ffmpeg-2026.10.25-win64.zip",
+      "sha256Source": "389847bb2b790f846c4158af59eeb49dc8a4c2bedb05269b68116018e1cd9a12",
+      "sizeBytes": 131872746,
+      "note": "BtbN FFmpeg-Builds（GPL，构建于 2026-10-25）。只保留 bin/ffmpeg.exe + bin/ffprobe.exe + LICENSE.txt。ffprobe 与本条共用同一个附件。"
+    },
+    {
+      "id": "ffprobe",
+      "platform": "win64",
+      "version": "2026.10.25",
+      "exe": "bin/ffprobe.exe",
+      "archive": true,
+      "prefixArgs": [],
+      "sourceUrl": "https://github.com/huang-mian/pingai-hk/releases/download/tools-2026-10-26/ffmpeg-2026.10.25-win64.zip",
+      "sha256Source": "389847bb2b790f846c4158af59eeb49dc8a4c2bedb05269b68116018e1cd9a12",
+      "sizeBytes": 131872746,
+      "note": "与 ffmpeg 同一个附件（ADR-0143 补记一第五节：一条 Release 附件、两条 DB 行）。磁盘上会各解压一份。"
+    },
+    {
+      "id": "hyperframes",
+      "platform": "win64",
+      "version": "0.8.202",
+      "exe": "node.exe",
+      "archive": true,
+      "prefixArgs": ["hyperframes/bin/hyperframes.mjs"],
+      "sourceUrl": "https://github.com/huang-mian/pingai-hk/releases/download/tools-2026-10-26/hyperframes-0.8.202-win64.zip",
+      "sha256Source": "efd0e2c81f857feb711a775e1be7b6c021a8762985103ddc96c9ee1c86294fd1",
+      "sizeBytes": 67313923,
+      "note": "hyperframes 0.8.202（Apache-2.0，heygen-com/hyperframes）+ 生产依赖 + 自带 Node v22.15.0。入口：node.exe hyperframes/bin/hyperframes.mjs —— 组件仓必须给 prefixArgs，否则执行的是 node.exe 本身（开 REPL）。"
+    }
+  ]
+}
